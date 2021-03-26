@@ -13,23 +13,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="./img/icon.png">
   <title>CRUD - Alves Rosendo</title>
 </head>
 
 <body>
-  <div>
-    <h1>Mis Notas</h1>
-    <br>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NuevaNota">Crear Nota</button>
-    <!-- Barra de Búsqueda -->
-  </div>
-  <div class="mt-5 mb-3">
-    <form id="formBusqueda">
-      <label for="busqueda">Búsqueda por titulo y contenido</label>
-      <input id="busqueda" type="text">
-      <button type="submit">Buscar</button>
-      <button type="button" onclick="limpiarFiltro()">Limpiar</button>
-    </form>
+  <div class="orden">
+    <div>
+      <div id="reseña" class="container mt-5">
+        <h3>Mis reseñas</h3>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NuevaNota">Crear
+          Nota</button>
+        <!-- Barra de Búsqueda -->
+      </div>
+      <div id="tablabusqueda" class="mt-5 mb-5">
+        <form id="formBusqueda">
+          <label for="busqueda"><strong>Búsqueda por titulo y contenido</strong></label>
+          <input id="busqueda" type="text">
+          <button type="submit" class="btn btn-warning btn-sm">Buscar</button>
+          <button type="button" class="btn btn-dark btn-sm" onclick="limpiarFiltro()">Limpiar</button>
+        </form>
+      </div>
+    </div>
+    <!--Tabla Notas-->
+    <div id="tablareseñas">
+      <table class="table table-light table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Titulo</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+      </table>
+      <div id="alertaBusqueda" class="alert alert-info d-none">No hay resultados para la búsqueda</div>
+
+    </div>
   </div>
 
 
@@ -65,23 +87,6 @@
     </div>
   </div>
 
-  <!--Tabla Notas-->
-  <div>
-    <table class="table table-dark table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Titulo</th>
-          <th scope="col">Categoria</th>
-          <th scope="col">Acciones</th>
-        </tr>
-      </thead>
-      <tbody id="table">
-
-      </tbody>
-    </table>
-    <div id="alertaBusqueda" class="alert alert-info d-none">No hay resultados para la búsqueda</div>
-
-  </div>
 
   <!-- Modal Detalle Notas -->
   <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

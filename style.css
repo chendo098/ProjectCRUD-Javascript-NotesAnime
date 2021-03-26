@@ -1,0 +1,47 @@
+body {
+    background-image: url(./img/manga.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+@media (min-width: 992px) {
+    .orden {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+#reseña,
+#tablabusqueda {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 15px;
+    width: 400px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#tablareseñas {
+    margin: 20px;
+    padding: auto;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
